@@ -127,7 +127,7 @@ app.get('/images/:key', async (req, res, next) => {
 // error handlers
 
 app.use((req, res, next) => {
-  const err = new Error('Not Found');
+  const err = new Error('You fucked up');
   err.status = 404;
   next(err);
 });
@@ -188,8 +188,8 @@ function notifySlack(imageUrl, payload, location, action) {
 
   slack.webhook({
     channel,
-    username: 'Plex',
-    icon_emoji: ':plex:',
+    username: 'Plexwatcher',
+    icon_emoji: ':movie_camera:',
     attachments: [{
       fallback: 'Required plain-text summary of the attachment.',
       color: '#a67a2d',
