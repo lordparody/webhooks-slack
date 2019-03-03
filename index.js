@@ -44,8 +44,8 @@ app.post('/', upload.single('thumb'), async (req, res, next) => {
   const key = sha1(payload.Server.uuid + payload.Metadata.ratingKey);
 
   // missing required properties
-  if (!payload.user || !payload.Metadata || !(isAudio || isVideo)) {
-    return res.sendStatus(400);
+ // if (!payload.user || !payload.Metadata || !(isAudio || isVideo)) {
+  //  return res.sendStatus(400);
   }
 
   // retrieve cached image
