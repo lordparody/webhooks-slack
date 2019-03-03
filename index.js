@@ -46,7 +46,7 @@ app.post('/', upload.single('thumb'), async (req, res, next) => {
   // missing required properties
  // if (!payload.user || !payload.Metadata || !(isAudio || isVideo)) {
   //  return res.sendStatus(400);
-  }
+  //}
 
   // retrieve cached image
   let image = await redis.getBuffer(key);
